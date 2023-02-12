@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!--CSS Styles -->
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <!-- Favicons -->
+        <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href=""
+        />
+        <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href=""
+        />
+
+        <!-- Animate CSS CDN -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <title>Raphael's Portfolio</title>
+    </head>
+
+    <body>
+        <!--Navbar-->
+        <nav>
+            <h1>RAPHAEL BEAUREGARD</h1>
+            <ul class="navigation">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact Me</a></li>
+            </ul>
+            <!--For Mobile Only-->
+            <button class="burger-menu" id="burger-menu">
+                <ion-icon class="bars" name="menu-outline"></ion-icon>
+            </button>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero animate__animated animate__fadeInLeft" id="about">
+            <img
+                src="img/femdev.png"
+                alt="Raphael B."
+                loading="lazy"
+                class="hero-img"
+            />
+            <div class="bio">
+                <h2 class="bio-title">About Me!</h2>
+                <p class="bio-text">
+                    Hey there, my name is Raphael! I'm a young and passionate mostly self-thaught programmer. My dream career is, you guessed it, to be a programmer! Some things are a bit more fun to code than others, but as long as I code, I never get bored of solving problems ^^! I'm also a huge fan of maths and love to learn. I love improving as well, so if you'd like to criticize my code constructively, then you're more than welcomed!
+                </p>
+            </div>
+        </section>
+        <!-- More about -->
+        <section class="more-about">
+            <h2>...Even <i><b>MORE</b></i> about me!</h2>
+            <p>
+                I started coding a bit ago in 2018. At the time, I was only thirteen. My city did not offer any middle school programming class and so I had to improvise when I wanted to learn. I started small with Python and after a few days, I was already making Blender 3D Scripts. It was nothing too complex, but it was good enough for a few 3D artists to look forward to my next scripts! Fast forward a few months later and I'm programming Source Engine Mods with C++ and jumping from project to project.
+            </p>
+            <p>
+                The Internet is a wonderful place filled with often untapped knowledge. Although coding is not for everybody, I truly believe that it is one of the best skills to have in our time and it is something everybody can learn once they've found the right resources online like I have. Everything I've learned comes from free resources from many websites across the web and it's all thanks to this wonderful community that allows growth and encourages learning through mistakes and experiences! 
+            </p>
+            <p>
+                Going into adulthood, I have participated in many projects in small and big teams. I even lead some of them! Although I have some favourite languages, I've played around most popular programming languages and I've learned problem solving over simple code memorization. That means that no matter what programming language I'll be using, I can always find the solution to the problem presented in front of me. There might be a small learning curve for languages I have not yet encountered, but with the way I developped my skillset, this curve will be the easiest it could ever be to overcome!
+            </p>
+        </section>
+
+        <!-- Skills section -->
+        <section class="skills" id="skills">
+            <h2 class="skill-header">My Main Skills</h2>
+
+            <div class="skills-wrapper">
+                <div class="first-set animate__animated animate__pulse">
+                    <img
+                        src="img/skill1.png"
+                        alt=""
+                        loading="lazy"
+                        class="icon icon-card"
+                    />
+                    <img
+                        src="img/skill2.png"
+                        alt=""
+                        loading="lazy"
+                        class="icon icon-card"
+                    />
+                    <img
+                        src="img/skill3.png"
+                        alt=""
+                        loading="lazy"
+                        class="icon icon-card"
+                    />
+                </div>
+                <div class="second-set animate__animated animate__pulse">
+                    <img
+                        src="img/skill4.png"
+                        alt=""
+                        loading="lazy"
+                        class="icon icon-card"
+                    />
+                    <img
+                        src="img/skill5.png"
+                        alt=""
+                        loading="lazy"
+                        class="icon icon-card"
+                    />
+                    <img
+                        src="img/skill6.png"
+                        alt=""
+                        loading="lazy"
+                        class="icon icon-card"
+                    />
+                </div>
+            </div>
+        </section>
+        <!-- Projects section -->
+        <section class="projects" id="projects">
+            <h2 class="projects-title">Some of my work!</h2>
+            <div class="projects-container">
+                <div class="project-container project-card">
+                    <img
+                        src="img/prj1.png"
+                        alt="Project #1"
+                        loading="lazy"
+                        class="project-pic"
+                    />
+                    <h3 class="project-title">yOS (YuriOS)</h3>
+                    <ul>
+                        <li>2020-2022</li>
+                        <li>Solo Project</li>
+                    </ul>
+                    <p class="project-details">
+
+                        Unlike what you might assume from the 'amazing' name I gave this program, this is not an operating system. This is actually an all-purpose automation bot as well as being an account manager. This was great if you wanted to control your multiple accounts of different services from one unified place. This bot started being active on a few Discord servers and extended to support SMS through TextNow, Email, and Telegram. From the Discord App, you could simply message this bot with a command and it would process it to other services. I made this for myself as an end to constantly logging in and out to just send one message through an alternative account in every app. As of right now, I am remaking the entire software to have a public API under another name meaning I am not working on this version anymore, but the original bot is still functionning since 2020.
+                    </p>
+                    <a href="#contact" target="_blank" class="project-link">Contact me for more info!</a>
+                </div>
+                <div class="project-container project-card">
+                    <img
+                        src="img/prj2.png"
+                        alt="Project #2"
+                        loading="lazy"
+                        class="project-pic"
+                    />
+                    <h3 class="project-title">Blur 3D</h3>
+                    <ul>
+                        <li>2018-2019</li>
+                        <li>Group Project</li>
+                    </ul>
+                    <p class="project-details">
+
+                        Blur 3D was a program heavily based on Valve's Source Filmmaker. The idea behind the project was to create an 3D animation software as easy to use as Source Filmmaker (that had not been updated for years) with its huge assets library from the Workshop. We made sure the program supported Source Filmmaker assets as compatibility was our number one priority. The software was built in C++ using Qt as a framework for the user interface. We also decided to use Vulkan instead of OpenGL for graphics. Unfortunately, this project did not fully come to be and was cancelled a few months after its public announcement due to several factors, one of them being my departure from the project as I had to focus on school a bit more during that time. However, this has been a wonderful learning experience. I've learned a lot about what it was like working and coding as a team and about some new APIs.
+                    </p>
+                    <a href="#contact" target="_blank" class="project-link">Contact me for more info!</a>
+                </div>
+                <div class="project-container project-card">
+                    <img
+                        src="img/prj3.png"
+                        alt="Project #3"
+                        loading="lazy"
+                        class="project-pic"
+                    />
+                    <h3 class="project-title">Doki Doki Ultimate Combo</h3>
+                    <ul>
+                        <li>2019-2021</li>
+                        <li>Solo Project</li>
+                    </ul>
+                    <p class="project-details">
+
+                        From 2019 to around 2021-22, I had an active Youtube channel centered around me modding video games. It did decently and ended up with around 20K subscribers. Although I've modded more than one game on this channel, the biggest mod I've made was on a game named Doki Doki Literature Club, a horror Visual Novel using the Ren'py Python-Based engine. A lot of people have modded this game partially thanks to my tutorial series, but I always stood out as my mods being much more customized in assets and functionalities. Although this was mainly a solo project, I've sometimes collaborated with other modders to more extensives custom stories within the game. Collaboration did not just stop at code however; I've also collaborated with artists to get new assets in the game and make the game even more lively and dynamic than it already was!
+                    </p>
+                    <a href="#contact" target="_blank" class="project-link">Contact me for more info!</a>
+                </div>
+            </div>
+        </section>
+        <!-- Contact section -->
+
+        <section class="contact" id="contact">
+            <div class="contact-form-container">
+                <h2>Any Questions? Ask away!</h2>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xzbqekan" method="POST">
+                        <div class="form-control">
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="sender-name"
+                                placeholder="What's your name?"
+                                class="input-field"
+                                required
+                            />
+                            <div class="form-control">
+                                <label for="email">Email</label>
+                                <input
+                                  type="email"
+                                  id="email"
+                                  name="sender-email"
+                                  placeholder="Could I get your email, please?"
+                                  class="input-field"
+                                  required
+                                />
+                              </div>
+                              <div class="form-control">
+                                <label for="message">Message</label>
+                                <textarea
+                                  id="message"
+                                  cols="60"
+                                  rows="10"
+                                  placeholder="What would you like to send?"
+                                  name="message"
+                                  class="input-field"
+                                  required
+                                ></textarea>
+                              </div>
+                              <input
+                                type="submit"
+                                value="Send away!"
+                                id="submit-btn"
+                                class="submit-btn"
+                              />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social accounts - Fixed to the right -->
+        <div class="socials">
+            <a href="https://github.com/LovesickDev" target="_blank"
+              ><img
+                src="img/github.gif"
+                alt="Github"
+                loading="lazy"
+                class="socicon"
+            /></a>
+            <a href="https://www.instagram.com/urlovesickbear/" target="_blank"
+              ><img
+                src="img/instagram.gif"
+                alt="Instagram"
+                loading="lazy"
+                class="socicon"
+            /></a>
+            <a href="https://twitter.com/LovesickDev" target="_blank"
+              ><img
+                src="img/twitter.gif"
+                alt="Twitter"
+                loading="lazy"
+                class="socicon"
+            /></a>
+        </div>
+        <!-- Scroll to top -->
+        <i class="scroll-up" id="scroll-up">
+            <img
+                src="img/scrollup.gif"
+                class="socicon up-arrow"
+                id="up-arrow"
+                alt="scroll-up"
+            />
+        </i>
+        <!-- Footer section -->
+        <footer>
+            <p class="copy">&copy; Copyright 2023</p>
+            <p class="copy">
+                Built with &#x2661; by yours truly: <a href="https://github.com/LovesickDev">Raphael Beauregard!</a>
+            </p>
+        </footer>
+        <!--Scripts-->
+        <script src="js/script.js"></script>
+
+        <!--Ion Icons scripts-->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+
+    </body>
+</html>
