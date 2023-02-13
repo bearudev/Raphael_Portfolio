@@ -188,9 +188,16 @@ body {
     margin-bottom: 1rem;
 }
 
+
 .skills-wrapper img {
+    
     padding: 1.25rem;
 }
+
+.github-stats {
+    display: block;
+    width: 100%;
+  }
 
 .icon {
     width: 11.875;
@@ -493,6 +500,10 @@ body {
     
       .contact-form-container {
         max-width: 23.75rem;
+      }
+
+      .github-stats {
+        display: none;
       }
 }
 
