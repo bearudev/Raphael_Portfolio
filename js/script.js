@@ -40,3 +40,11 @@ navLink.forEach((link) =>
         ul.classList.remove("show");
     })
 )
+
+const socials = document.querySelector("#socials");
+
+socials.addEventListener("hover", () => {
+    console.log("Hover")
+    socials.classList.add("animate__animated");
+    socials.classList.add("animate__bounce");
+})

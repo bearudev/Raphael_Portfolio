@@ -235,7 +235,8 @@ body {
 .project-container {
     text-align: center;
     width: 30%;
-    height: 60%;
+    min-height: 99%;
+    max-height: 100%;
     padding: 1rem;
 }
 
@@ -340,15 +341,18 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    right: 1%;
+    right: -4rem;
     bottom: 50%;
     background-color: #fff;
     border-radius: 2rem;
     border-top-left-radius: 2rem;
-    height:10%;
+    height:8rem;
+    width: 7rem;
   }
+
   
   .socicon {
+    right: 1%;
     width: 2rem;
     height: 2rem;
   }
