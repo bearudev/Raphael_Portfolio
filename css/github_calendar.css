@@ -105,7 +105,8 @@
       line-height: 1.3em;
       font-size: 24px;
       display: block;
-      color: #333;
+      color: #ff6868;
+      text-shadow: 0 3px 10px #000;
   }
   
   .calendar img.spinner {
