@@ -1,3 +1,4 @@
+
 const scrollUp = document.querySelector("#scroll-up")
 
 window.addEventListener("scroll", function(){
@@ -59,5 +60,48 @@ window.mobileCheck = function() {
     if (window.mobileCheck()){
         alert("This website is not yet fully optimized for mobile phones. It is recommended you use a larger device to see this page.")
     }
+    init_projects()
   })
+
+
+//Projects stuff
+
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
+
+function fetchJSONfromfile(file){
+    readTextFile(file, function(text){
+        return JSON.parse(text);
+    })
+}
+
+const projectsContainer = document.getElementsByClassName("projects-container")[0]
+
+async function fetchDataAsync(url) {
+    const response = await fetch(url);
+    return await response.json();
+}
+
+async function init_projects(){
+    const projectData = await fetchDataAsync('js/projects.json')
+
+    for(var projectIndex of Object.keys(projectData)){
+        const projectCard = document.createElement("div")
+        projectCard.classList.add("project-container")
+        projectCard.classList.add("project-card")
+        projectsContainer.appendChild(projectCard)
+
+        var name = projectData[projectIndex]["name"]
+        console.log(name)
+    }
+}
 
