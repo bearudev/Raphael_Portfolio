@@ -94,14 +94,64 @@ async function fetchDataAsync(url) {
 async function init_projects(){
     const projectData = await fetchDataAsync('js/projects.json')
 
+    const randomMoreText = [
+        "Curious?",
+        "More!",
+        "Learn More ♡",
+        "Wanna know more?",
+        "Click me!"
+    ]
+    const prjMoreBtnText = randomMoreText[Math.floor(Math.random() * 5)]
+
     for(var projectIndex of Object.keys(projectData)){
+        //Setting up new project card
         const projectCard = document.createElement("div")
         projectCard.classList.add("project-container")
         projectCard.classList.add("project-card")
         projectsContainer.appendChild(projectCard)
 
-        var name = projectData[projectIndex]["name"]
-        console.log(name)
+        //Adding prj image
+        const prjImg = document.createElement("img")
+        prjImg.classList.add("project-pic")
+        prjImg.src = "./img/prj" + projectIndex + ".png" //Good or not?
+        projectCard.appendChild(prjImg)
+        
+        //Adding title
+        const prjTitle = document.createElement("h3")
+        prjTitle.classList.add("project-title")
+        prjTitle.textContent = projectData[projectIndex]["name"]
+        projectCard.appendChild(prjTitle)
+
+        //Adding sub-details
+        const prjDetails = document.createElement("ul")
+        const prjYear = document.createElement("li")
+        const prjType = document.createElement("li")
+        const prjLanguage = document.createElement("li")
+
+        const subPrefix = "> "
+        prjYear.textContent =subPrefix + projectData[projectIndex]["date"]
+        prjType.textContent =subPrefix + projectData[projectIndex]["projectType"] + " PROJECT"
+        prjLanguage.textContent =subPrefix + "Made with " + projectData[projectIndex]["languages"]
+
+        prjDetails.appendChild(prjYear)
+        prjDetails.appendChild(prjType)
+        prjDetails.appendChild(prjLanguage)
+        projectCard.appendChild(prjDetails)
+
+        //Adding description
+        const prjDescription = document.createElement("p")
+        prjDescription.textContent = projectData[projectIndex]["description"]
+        prjDescription.classList.add("project-details")
+        projectCard.appendChild(prjDescription)
+
+        //Adding learn mode button
+        const prjMoreBtn = document.createElement("button")
+        
+        prjMoreBtn.textContent = prjMoreBtnText
+        prjMoreBtn.classList.add("project-more-button")
+        projectCard.appendChild(prjMoreBtn)
+        var pathToProjectHTML = "./html/prj" + projectIndex + ".html"
+        prjMoreBtn.setAttribute("onClick", "location.href=\""+pathToProjectHTML+'"')
     }
 }
 

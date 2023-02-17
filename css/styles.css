@@ -10,7 +10,6 @@ selector {
 
 /*Importing font*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,700&display=swap");
-
 :root {
     --font-family: "Montserrat", sans-serf;
     --normal-font: 400;
@@ -151,7 +150,8 @@ body {
 .bio h1 {
     margin-bottom: var(--bottom-margin);
     align-items: center;
-    
+    animation: typing 3.5 steps(40, end),
+        blink-caret .75s step-end infinite;
 }
 
 .bio p {
@@ -404,6 +404,48 @@ body {
     right:0.5%;
     transform: rotate(0deg);
 }
+
+.project-more-button {
+    padding:1.25rem;
+    padding-right: 30%;
+    padding-left: 30%;
+    border-radius: 6rem;
+    font-family: "Montserrat";
+    font-size: large;
+    text-shadow: 4px 4px 5px #000;
+    box-shadow: 0px 2px 15px 2px #000;
+    background: linear-gradient(to left, var(--primary-color) 60%, #ff2125 10%) right;
+    background-size: 300% 100%;
+    color: var(--secondary-color);
+    transition: all 2s ease
+}
+
+.project-more-button:hover {
+    background-position: left;
+}
+
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid var(--primary-color); /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
 
 @media screen and (max-width: 720px){
     nav {

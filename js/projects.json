@@ -3,12 +3,16 @@
         {
             "name":"yOS (YuriOS)",
             "date":"2020-2022",
-            "projectType":"solo"
+            "projectType":"solo",
+            "languages":"Python & JS",
+            "description":"A Multi-account Social Automation Manager for all major social platforms!"
         },
     "2":
         {
-            "name":"yOS (YuriOS)",
-            "date":"2020-2022",
-            "projectType":"solo"
+            "name":"Blur 3D",
+            "date":"2018-2019",
+            "projectType":"group",
+            "languages":"C++",
+            "description":"3D Animation software heavily inspired by Valve's Source Filmmaker."
         }
 }
