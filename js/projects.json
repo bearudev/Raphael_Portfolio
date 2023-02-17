@@ -14,5 +14,13 @@
             "projectType":"group",
             "languages":"C++",
             "description":"3D Animation software heavily inspired by Valve's Source Filmmaker."
+        },
+    "3":
+        {
+            "name":"Doki Doki Ultimate Combo",
+            "date":"2019-2022",
+            "projectType":"solo",
+            "languages":"Python/Ren'py VN Engine",
+            "description":"Huge Game mod package filled with new stories for all players to enjoy."
         }
 }
