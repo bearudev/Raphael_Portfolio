@@ -5,7 +5,8 @@
             "date":"2020-2022",
             "projectType":"solo",
             "languages":"Python & JS",
-            "description":"A Multi-account Social Automation Manager for all major social platforms!"
+            "description":"A Multi-account Social Automation Manager for all major social platforms!",
+            "color": "#fff"
         },
     "2":
         {
@@ -13,7 +14,8 @@
             "date":"2018-2019",
             "projectType":"group",
             "languages":"C++",
-            "description":"3D Animation software heavily inspired by Valve's Source Filmmaker."
+            "description":"3D Animation software heavily inspired by Valve's Source Filmmaker.",
+            "color": "#fff"
         },
     "3":
         {
@@ -21,6 +23,7 @@
             "date":"2019-2022",
             "projectType":"solo",
             "languages":"Python/Ren'py VN Engine",
-            "description":"Huge Game mod package filled with new stories for all players to enjoy."
+            "description":"Huge Game mod package filled with new stories for all players to enjoy.",
+            "color": "#fff"
         }
 }

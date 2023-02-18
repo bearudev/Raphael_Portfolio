@@ -84,7 +84,10 @@ function fetchJSONfromfile(file){
     })
 }
 
-const projectsContainer = document.getElementsByClassName("projects-container")[0]
+const allProjectsContainer = document.getElementById("projects-container")
+const projectsContainer = document.createElement("div")
+projectsContainer.classList.add("projects-container")
+allProjectsContainer.appendChild(projectsContainer)
 
 async function fetchDataAsync(url) {
     const response = await fetch(url);
@@ -150,8 +153,41 @@ async function init_projects(){
         prjMoreBtn.textContent = prjMoreBtnText
         prjMoreBtn.classList.add("project-more-button")
         projectCard.appendChild(prjMoreBtn)
-        var pathToProjectHTML = "./html/prj" + projectIndex + ".html"
-        prjMoreBtn.setAttribute("onClick", "location.href=\""+pathToProjectHTML+'"')
+        var projectBtnOnClick = "createProjectDiv(" + projectIndex + ")"
+        prjMoreBtn.setAttribute("onClick", projectBtnOnClick)
     }
 }
 
+async function createProjectDiv(projectIndexString){
+    const projectData = await fetchDataAsync('js/projects.json')
+    const backgroundDiv = document.createElement("div")
+    backgroundDiv.appendChild(document.createElement('br'))
+    backgroundDiv.classList.add("project-page-background")
+    backgroundDiv.id = "project-page-background"
+
+    const pageDiv = document.createElement("div")
+    //Adding to something
+    const projectSection = document.getElementById("projects-container")
+    projectSection.appendChild(backgroundDiv)
+    projectSection.appendChild(pageDiv)
+    pageDiv.id = "project-page"
+    pageDiv.classList.add("project-page")
+    pageDiv.style.backgroundColor = projectData[projectIndexString]["color"]
+    const testTxt = document.createElement('p')
+    testTxt.textContent = "dsadsa"
+    pageDiv.appendChild(testTxt)
+
+    //Quit button
+    const pageExit = document.createElement("button")
+    pageExit.textContent = "Close"
+    pageExit.onclick = function() {
+        const pageToHide = document.getElementById("project-page")
+        pageToHide.remove()
+        
+        const bg = document.getElementById("project-page-background")
+        //bg.classList.remove()
+        bg.remove()
+    }
+    pageDiv.appendChild(pageExit)
+
+}
