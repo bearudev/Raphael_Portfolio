@@ -518,9 +518,9 @@ body {
 
 .project-page-close {
     position: fixed;
-    left:74%;
-    top:26.5%;
-    transform: translateX(-74%) translateY(-26.5%);
+    left:50%;
+    top:70%;
+    transform: translateX(-50%) translateY(-70%);
 }
 
 .project-page-close img {

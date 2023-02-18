@@ -173,14 +173,20 @@ async function createProjectDiv(projectIndexString){
     pageDiv.id = "project-page"
     pageDiv.classList.add("project-page")
     pageDiv.style.backgroundColor = projectData[projectIndexString]["color"]
+    pageDiv.style.color = projectData[projectIndexString]["txtcolor"]
     const testTxt = document.createElement('p')
-    testTxt.textContent = "dsadsa"
+    testTxt.textContent = projectData[projectIndexString]["bio"]
     pageDiv.appendChild(testTxt)
 
     //Quit button
-    const pageExit = document.createElement("i")
+    const pageExit = document.createElement("div")
+    const pageExitTxt = document.createElement("p")
+    pageExitTxt.textContent = "Exit!"
+    pageExit.appendChild(pageExitTxt)
     const pageExitImg = document.createElement("img")
-    pageExitImg.src = "./img/close_project.png"
+    if (projectData[projectIndexString]["isTextLight"])
+        {pageExitImg.src = "./img/close_project_light.png"}
+    else {pageExitImg.src = "./img/close_project.png"}
     pageExit.appendChild(pageExitImg)
     pageExit.classList.add("project-page-close")
     pageExit.onclick = function() {

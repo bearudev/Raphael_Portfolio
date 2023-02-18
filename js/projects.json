@@ -6,7 +6,10 @@
             "projectType":"solo",
             "languages":"Python & JS",
             "description":"A Multi-account Social Automation Manager for all major social platforms!",
-            "color": "#fff"
+            "bio":"PLACEHOLDER",
+            "color": "#5d3c94",
+            "txtcolor": "#fff",
+            "isTextLight": true
         },
     "2":
         {
@@ -15,7 +18,10 @@
             "projectType":"group",
             "languages":"C++",
             "description":"3D Animation software heavily inspired by Valve's Source Filmmaker.",
-            "color": "#fff"
+            "bio":"PLACEHOLDER",
+            "color": "#2c69b3",
+            "txtcolor": "#fff",
+            "isTextLight": true
         },
     "3":
         {
@@ -24,6 +30,9 @@
             "projectType":"solo",
             "languages":"Python/Ren'py VN Engine",
             "description":"Huge Game mod package filled with new stories for all players to enjoy.",
-            "color": "#fff"
+            "bio":"PLACEHOLDER",
+            "color": "#eca8f0",
+            "txtcolor": "#000",
+            "isTextLight": false
         }
 }
