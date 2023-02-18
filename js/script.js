@@ -178,15 +178,31 @@ async function createProjectDiv(projectIndexString){
     pageDiv.appendChild(testTxt)
 
     //Quit button
-    const pageExit = document.createElement("button")
-    pageExit.textContent = "Close"
+    const pageExit = document.createElement("i")
+    const pageExitImg = document.createElement("img")
+    pageExitImg.src = "./img/close_project.png"
+    pageExit.appendChild(pageExitImg)
+    pageExit.classList.add("project-page-close")
     pageExit.onclick = function() {
         const pageToHide = document.getElementById("project-page")
-        pageToHide.remove()
+        pageToHide.style.animationName = "prj-page-slideout"
         
         const bg = document.getElementById("project-page-background")
-        //bg.classList.remove()
-        bg.remove()
+        bg.style.animationName = "bg-fadeout"
+
+        var elementArray = []
+
+        pageToHide.childNodes.forEach(element => {
+            element.style.animationName = "prj-page-items-fadeout"
+            elementArray.push(element)
+        });
+
+        setTimeout(function () {pageToHide.remove(); bg.remove();}, 1500)
+        setTimeout(function () 
+        {
+            elementArray.forEach(element => {
+                element.remove()
+        })}, 1000);
     }
     pageDiv.appendChild(pageExit)
 

@@ -449,8 +449,15 @@ body {
   }
 
 @keyframes prj-page-slidein {
-    from {top:125%}
-    to {top: 25%}
+    0% {top:125%;width:1%;height:1%;left:49.5%;border-radius: 100px;}
+    50% {top: 50%;width:1%;height:1%;left:49.5%;border-radius: 100px;}
+    100% {top: 25%;width:50%;height:50%;left:25%;border-radius: 20px;}
+}
+
+@keyframes prj-page-slideout {
+    0% {top: 25%;width:50%;height:50%;left:25%;border-radius: 20px;}
+    50% {top: 50%;width:1%;height:1%;left:49.5%;border-radius: 100px;}
+    100% {top:125%;width:1%;height:1%;left:49.5%;border-radius: 100px;}
 }
 
 .project-page {
@@ -459,15 +466,40 @@ body {
     height: 50%;
     position:fixed;
     top:125%;
-    left:25%;
+    left:49.5%;
     border-radius: 10px;
     padding: 1rem;
+    align-self: center;
     animation: prj-page-slidein 1s ease forwards
+}
+
+@keyframes prj-page-items-fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+
+}
+@keyframes prj-page-items-fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.project-page * {
+    opacity: 0;
+    animation-name: prj-page-items-fadein;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
 }
 
 @keyframes bg-fadein {
     from {opacity: 0;}
     to {opacity: .75;}
+}
+
+@keyframes bg-fadeout {
+    from {opacity:.75;}
+    to {opacity: 0;}
 }
 
 .project-page-background {
@@ -484,7 +516,17 @@ body {
     animation-fill-mode: forwards;
 }
 
+.project-page-close {
+    position: fixed;
+    left:74%;
+    top:26.5%;
+    transform: translateX(-74%) translateY(-26.5%);
+}
 
+.project-page-close img {
+    width: 70%;
+    height: 70%;
+}
 
 @media screen and (max-width: 720px){
     nav {
