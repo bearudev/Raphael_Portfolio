@@ -157,6 +157,9 @@ async function init_projects(){
         prjMoreBtn.setAttribute("onClick", projectBtnOnClick)
     }
 }
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
+var projectDivCreated=false
 
 async function createProjectDiv(projectIndexString){
     const projectData = await fetchDataAsync('js/projects.json')
@@ -174,9 +177,9 @@ async function createProjectDiv(projectIndexString){
     pageDiv.classList.add("project-page")
     pageDiv.style.backgroundColor = projectData[projectIndexString]["color"]
     pageDiv.style.color = projectData[projectIndexString]["txtcolor"]
-    const testTxt = document.createElement('p')
-    testTxt.textContent = projectData[projectIndexString]["bio"]
-    pageDiv.appendChild(testTxt)
+    const bioText = document.createElement('p')
+    bioText.classList.add("project-page-bio-text")
+    bioText.textContent = projectData[projectIndexString]["bio"]
 
     //Quit button
     const pageExit = document.createElement("div")
@@ -189,27 +192,84 @@ async function createProjectDiv(projectIndexString){
     else {pageExitImg.src = "./img/close_project.png"}
     pageExit.appendChild(pageExitImg)
     pageExit.classList.add("project-page-close")
-    pageExit.onclick = function() {
+    pageExit.onclick = async()=> {
         const pageToHide = document.getElementById("project-page")
+        
+        var elementArray = []
+        pageToHide.childNodes.forEach(element => {
+            element.style.animationDelay = "0s"
+            element.style.animationName = "prj-page-items-fadeout"
+            elementArray.push(element)
+        });
+        await delay(1000)
+        pageToHide.style.animationDuration = "0.8s"
         pageToHide.style.animationName = "prj-page-slideout"
         
         const bg = document.getElementById("project-page-background")
         bg.style.animationName = "bg-fadeout"
 
-        var elementArray = []
 
-        pageToHide.childNodes.forEach(element => {
-            element.style.animationName = "prj-page-items-fadeout"
-            elementArray.push(element)
-        });
-
-        setTimeout(function () {pageToHide.remove(); bg.remove();}, 1500)
-        setTimeout(function () 
-        {
-            elementArray.forEach(element => {
+        elementArray.forEach(element => {
+            setTimeout(function(){
                 element.remove()
-        })}, 1000);
+            }, 2000)
+        })
+        setTimeout(function () {pageToHide.remove(); bg.remove();}, 2000)
+        projectDivCreated = false
     }
+    
+
+    //imgPosX, imgPosY
+    prjPageLayout = projectData[projectIndexString]["positions"]
+
+
+    //Project img
+    const projectImage = document.createElement("img")
+    projectImage.src = "./img/prj" + projectIndexString + ".png"
+    projectImage.classList.add("project-page-img")
+    pageDiv.appendChild(projectImage)
+    
+    //youtube iframe
+    const projectYoutube = document.createElement("iframe")
+    projectYoutube.classList.add("project-page-youtube")
+    projectYoutube.src=projectData[projectIndexString]["youtube"]
+    projectYoutube.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    projectYoutube.allowFullscreen = true
+    var projectYoutubeWidth= window.screen.availWidth*0.3
+    var projectYoutubeHeight = window.screen.availWidth*0.1
+    if (window.screen.availWidth > 1000){
+        projectYoutubeHeight = projectYoutubeHeight * 1.5
+    }
+    console.log(projectYoutubeWidth)
+    console.log(projectYoutubeHeight)
+    projectYoutube.width=projectYoutubeWidth.toString()
+    projectYoutube.height=projectYoutubeHeight.toString()
+    //adding bio after and stuff in order
+    pageDiv.appendChild(bioText)
+    pageDiv.appendChild(projectYoutube)
     pageDiv.appendChild(pageExit)
 
+    adaptProjectBioText()
+    projectDivCreated = true
+}
+
+function adaptProjectBioText(){
+    //Adapting text to always fill
+    const bioText = document.getElementsByClassName("project-page-bio-text")[0]
+    var spacing = document.body.clientWidth / 12000
+    var spacingWord = document.body.clientWidth / 9000
+    console.log(document.body.clientWidth)
+    if(document.body.clientWidth)
+    {
+
+        bioText.style.letterSpacing = spacing.toString() + "rem"
+        bioText.style.wordSpacing = spacingWord.toString() + "rem"
+    }
+}
+
+window.onresize = function(){
+    if (projectDivCreated)
+    {
+        adaptProjectBioText()
+    }
 }

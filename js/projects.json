@@ -6,10 +6,11 @@
             "projectType":"solo",
             "languages":"Python & JS",
             "description":"A Multi-account Social Automation Manager for all major social platforms!",
-            "bio":"PLACEHOLDER",
+            "bio": "Unlike what you might assume from the 'amazing' name I gave this program, this is not an operating system. This is actually an all-purpose automation bot as well as being an account manager. This was great if you wanted to control your multiple accounts of different services from one unified place. This bot started being active on a few Discord servers and extended to support SMS through TextNow, Email, and Telegram. From the Discord App, you could simply message this bot with a command and it would process it to other services. I made this for myself as an end to constantly logging in and out to just send one message through an alternative account in every app. As of right now, I am remaking the entire software to have a public API under another name meaning I am not working on this version anymore, but the original bot is still functionning since 2020 for some influencers that have requested it. However, I am planning on not updating this anymore by 2024.",
             "color": "#5d3c94",
             "txtcolor": "#fff",
-            "isTextLight": true
+            "isTextLight": true,
+            "youtube": "https://www.youtube.com/embed/iVBD_GR4vw0"
         },
     "2":
         {
@@ -18,10 +19,11 @@
             "projectType":"group",
             "languages":"C++",
             "description":"3D Animation software heavily inspired by Valve's Source Filmmaker.",
-            "bio":"PLACEHOLDER",
+            "bio":"Blur 3D was a program heavily based on Valve's Source Filmmaker. The idea behind the project was to create an 3D animation software as easy to use as Source Filmmaker (that had not been updated for years) with its huge assets library from the Workshop. We made sure the program supported Source Filmmaker assets as compatibility was our number one priority. The software was built in C++ using Qt as a framework for the user interface. We also decided to use Vulkan instead of OpenGL for graphics. Unfortunately, this project did not fully come to be and was cancelled a few months after its public announcement due to several factors, one of them being my departure from the project as I had to focus on school a bit more during that time. However, this has been a wonderful learning experience. I've learned a lot about what it was like working and coding as a team and about some new APIs.",
             "color": "#2c69b3",
             "txtcolor": "#fff",
-            "isTextLight": true
+            "isTextLight": true,
+            "youtube": "https://www.youtube.com/embed/14ssVfOtyko"
         },
     "3":
         {
@@ -30,9 +32,10 @@
             "projectType":"solo",
             "languages":"Python/Ren'py VN Engine",
             "description":"Huge Game mod package filled with new stories for all players to enjoy.",
-            "bio":"PLACEHOLDER",
+            "bio":"From 2019 to around 2021-22, I had an active Youtube channel I built and managed from scratch centered around me modding video games. It did decently and ended up with around 20K subscribers. Although I've modded more than one game on this channel, the biggest mod I've made was on a game named Doki Doki Literature Club, a horror Visual Novel using the Ren'py Python-Based engine. A lot of people have modded this game partially thanks to my tutorial series, but I always stood out as my mods being much more customized in assets and functionalities. Although this was mainly a solo project, I've sometimes collaborated with other modders to more extensives custom stories within the game. Collaboration did not just stop at code however; I've also collaborated with artists to get new assets in the game and make the game even more lively and dynamic than it already was! The video below is one of the many dozens of new stories I've made for the game. Comparing it to the base game, you can see how much has been changed and personalized as well! Please excuse the typos if there are any as I've wrote this a few years ago when I wasn't as fluent in English.",
             "color": "#eca8f0",
             "txtcolor": "#000",
-            "isTextLight": false
+            "isTextLight": false,
+            "youtube": "https://www.youtube.com/embed/5ls_HYKp9uk"
         }
 }
