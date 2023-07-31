@@ -711,3 +711,20 @@ body {
         animation: prj-page-slidein-mobile 1s ease forwards
     }
   } 
+
+.loading {
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    z-index: 999;
+    background-color: var(--secondary-shadow);
+    opacity: 0;
+}
+
+.loading h1 {
+    color: var(--secondary-color);
+    top: 50%;
+    right: 50%;
+    text-align: center;
+    position: sticky;
+}
